@@ -1,0 +1,24 @@
+{
+  "name": "barberapp-api",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Miguel Sanchez Padilla (onion)",
+  "scripts": {
+    "dev": "nodemon src/app.js --exec babel-node",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.18.2",
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.6",
+    "nodemon": "^2.0.2"
+  }
+}
