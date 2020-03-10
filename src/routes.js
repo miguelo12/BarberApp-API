@@ -1,4 +1,4 @@
-import ApiUser from './api/User';
+import ApiUser from './api/user';
 
 class Router {
   constructor(server) {
