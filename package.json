@@ -4,6 +4,12 @@
   "private": true,
   "author": "Miguel Sanchez Padilla (onion)",
   "scripts": {
+    "migrate_prod": "knex migrate:latest --cwd src --env production",
+    "unmigrate_prod": "knex migrate:rollback --cwd src --env production",
+    "seed_prod": "knex seed:run --cwd src --env production",
+    "migrate": "knex migrate:latest --cwd src",
+    "unmigrate": "knex migrate:rollback --cwd src",
+    "seed": "knex seed:run --cwd src",
     "dev": "nodemon src/app.js --exec babel-node",
     "build": "babel src --out-dir dist",
     "serve": "node dist/app.js"

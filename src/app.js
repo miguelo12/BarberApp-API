@@ -24,9 +24,7 @@ class Server {
     if (!process.env.environment) process.env.environment = "development"
     console.log(`The database initialize in mode ${process.env.environment}`)
 
-    const knex = new Knex(
-      process.env.environment == 'production' ? KnexConfig.production : KnexConfig.development
-    )
+    const knex = new Knex(KnexConfig[process.env.environment])
 
     Model.knex(knex)
 
@@ -37,6 +35,7 @@ class Server {
     })
 
     // Restify middleware
+    this.server.use(errorHandler)
     this.server.use(restify.plugins.acceptParser(this.server.acceptable))
     this.server.use(restify.plugins.queryParser())
     this.server.use(restify.plugins.bodyParser())
