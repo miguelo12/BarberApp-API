@@ -2,3 +2,7 @@ node_modules
 dist
 .env
 yarn-error.log
+
+# Key
+src/key/*
+!src/key/README.md

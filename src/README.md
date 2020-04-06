@@ -1,0 +1,1 @@
+Es necesario tener un .env para hacer funcionar la app.

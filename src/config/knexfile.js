@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' })
+require('dotenv').config({ path: __dirname + '/../.env' })
 
 module.exports = {
   development: {
@@ -7,12 +7,15 @@ module.exports = {
       host: process.env.PGHOST_DEV,
       user: process.env.PGUSER_DEV,
       password: process.env.PGPASS_DEV,
-      database: process.env.PGDB_DEV
+      database: process.env.PGDB_DEV,
+      ssl: {
+        rejectUnauthorized: false
+      }
     },
     migrations: {
-      directory: 'model/migrations',
-    }//,
-    //seeds: { directory: './data/seeds' }
+      directory: '../.knex/migrations',
+    },
+    seeds: { directory: '../.knex/seeds' }
   },
   production: {
     client: 'pg',
@@ -27,8 +30,8 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: 'model/migrations',
-    }//,
-    //seeds: { directory: './data/seeds' }
+      directory: '../.knex/migrations',
+    },
+    seeds: { directory: '../.knex/seeds' }
   }
 }
