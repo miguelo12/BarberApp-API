@@ -3,7 +3,6 @@ import Knex from 'knex'
 import { Model } from 'objection'
 import Routers from './router/routes'
 import KnexConfig from './config/knexfile'
-import jwt from 'jsonwebtoken'
 
 class Server {
   constructor() {
@@ -28,7 +27,7 @@ class Server {
     this.server.use(restify.plugins.bodyParser())
     
     // load all routes
-    var router = new Routers(jwt)
+    var router = new Routers()
     router.applyRoutes(this.server)
     
     this.server.listen(port, (err) => {

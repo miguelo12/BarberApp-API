@@ -1,4 +1,4 @@
-exports.up = function (knex, Promise) {
+exports.up = async function (knex) {
   return Promise.all([
     knex.schema.createTable("user_jwt", (tbl) => {
       tbl.integer("user_id").unsigned();
@@ -11,6 +11,6 @@ exports.up = function (knex, Promise) {
   ]);
 };
 
-exports.down = function (knex, Promise) {
+exports.down = async function (knex) {
   return Promise.all([knex.schema.dropTable("user_jwt")]);
 };

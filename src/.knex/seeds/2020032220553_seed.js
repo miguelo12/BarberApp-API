@@ -1,4 +1,4 @@
-exports.seed = function (knex, Promise) {
+exports.seed = async function (knex) {
   return knex("user")
     .del()
     .then(() => {

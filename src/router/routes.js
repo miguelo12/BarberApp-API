@@ -2,13 +2,13 @@
 import { Router } from 'restify-router'
 
 // API
-import ApiUser from '../api/auth/login'
+import LoginUser from '../api/auth/login'
 
 
 export default class Routers {
-  constructor(jwt) {
+  constructor() {
     const router = new Router()
-    router.add("/auth", new ApiUser(jwt))
+    router.add("/auth", new LoginUser())
     return router
   }
 }
