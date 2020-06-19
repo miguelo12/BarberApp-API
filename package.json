@@ -10,7 +10,8 @@
     "migrate": "knex migrate:latest --cwd src --knexfile config/knexfile.js --debug",
     "unmigrate": "knex migrate:rollback --cwd src --knexfile config/knexfile.js",
     "seed": "knex seed:run --cwd src --knexfile config/knexfile.js",
-    "dev_migrate": "yarn run migrate && yarn run seed && yarn run dev",
+    "dev_migrate": "yarn run migrate && yarn run seed",
+    "prod_prod": "yarn run migrate_prod && yarn run seed_prod",
     "dev": "nodemon src/app.js --exec babel-node",
     "build": "babel src --out-dir dist",
     "serve": "node dist/app.js"

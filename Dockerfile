@@ -16,4 +16,6 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm", "run", "dev_migrate" ]
+RUN yarn dev_migrate
+
+CMD [ "npm", "run", "dev" ]
