@@ -1,6 +1,8 @@
 # BarberApp-API
 API de BarberApp
 
+[![Build Status](https://travis-ci.com/miguelo12/BarberApp-API.svg?token=7sTJrMBkyKkAhd68ALp9&branch=master)](https://travis-ci.com/miguelo12)
+
 Package que se usaron:
 * [Restify]
 * [Knex]
