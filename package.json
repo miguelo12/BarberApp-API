@@ -14,7 +14,8 @@
     "prod_prod": "yarn run migrate_prod && yarn run seed_prod",
     "dev": "nodemon src/app.js --exec babel-node",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/app.js"
+    "serve": "node dist/app.js",
+    "test": "mocha"
   },
   "engineStrict": true,
   "engines": {
@@ -37,6 +38,7 @@
     "@babel/core": "^7.8.6",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.6",
+    "mocha": "^8.0.1",
     "nodemon": "^2.0.2",
     "sequelize-cli": "^5.5.1"
   }

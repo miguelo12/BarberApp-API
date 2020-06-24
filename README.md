@@ -2,11 +2,11 @@
 API de BarberApp
 
 Package que se usaron:
-* Restify
-* Knex
-* Objection
-* jsonwebtoken
-* dotenv
+* [Restify]
+* [Knex]
+* [Objection]
+* [jsonwebtoken]
+* [dotenv]
 
 Debes tener instalado:
 
@@ -15,12 +15,16 @@ Debes tener instalado:
 
 Aplicar el siguiente codigo si quieres correrlo.
 
-- docker-compose run app
-- docker-compose up
+```sh
+$ docker-compose run app
+$ docker-compose up
+```
 
 si quieres buildearlo y correr la app..
 
-- docker-compose up -d
+```sh
+$ docker-compose up -d
+```
 
 [Restify]: <https://github.com/restify/node-restify>
 [Knex]: <https://github.com/knex/knex>
