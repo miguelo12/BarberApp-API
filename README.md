@@ -1,12 +1,14 @@
 # BarberApp-API
 API de BarberApp
 
+[![Build Status](https://travis-ci.com/miguelo12/BarberApp-API.svg?token=7sTJrMBkyKkAhd68ALp9&branch=master)](https://travis-ci.com/miguelo12)
+
 Package que se usaron:
-* Restify
-* Knex
-* Objection
-* jsonwebtoken
-* dotnet
+* [Restify]
+* [Knex]
+* [Objection]
+* [jsonwebtoken]
+* [dotenv]
 
 Debes tener instalado:
 
@@ -15,9 +17,19 @@ Debes tener instalado:
 
 Aplicar el siguiente codigo si quieres correrlo.
 
-> docker-compose run app
-> docker-compose up
+```sh
+$ docker-compose run app
+$ docker-compose up
+```
 
 si quieres buildearlo y correr la app..
 
-> docker-compose up -d
+```sh
+$ docker-compose up -d
+```
+
+[Restify]: <https://github.com/restify/node-restify>
+[Knex]: <https://github.com/knex/knex>
+[Objection]: <https://github.com/Vincit/objection.js>
+[jsonwebtoken]: <https://github.com/auth0/node-jsonwebtoken>
+[dotenv]: <https://github.com/motdotla/dotenv>
