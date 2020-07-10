@@ -1,6 +1,8 @@
 # BarberApp-API
 API de BarberApp
 
+![](https://github.com/miguelo12/BarberApp-API/workflows/Check%20push%20and%20test/badge.svg)
+
 [![Build Status](https://travis-ci.com/miguelo12/BarberApp-API.svg?token=7sTJrMBkyKkAhd68ALp9&branch=master)](https://travis-ci.com/miguelo12)
 
 Package que se usaron:

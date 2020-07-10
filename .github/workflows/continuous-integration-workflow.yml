@@ -1,0 +1,26 @@
+name: Check push and test
+# This workflow is triggered on pushes to the repository.
+on: [push]
+# or
+
+# on:
+#     push:
+#       branches:
+#         - master
+#       tags:
+#         - v1
+#       # file paths to consider in the event. Optional; defaults to all.
+#       paths:
+#         - 'test/*'
+
+jobs:
+  build:
+    # Job name
+    name: test launch
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      # This step prints an output (time) from the previous step's action.
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker-compose --file docker-compose.test.yml up --build
