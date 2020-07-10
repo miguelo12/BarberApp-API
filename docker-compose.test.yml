@@ -14,11 +14,11 @@ services:
       - .:/app/
       - /app/node_modules
 
-  postgres:
-    image: postgres:10.13
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 1512
-      POSTGRES_DB: barberapp
+  # postgres:
+  #   image: postgres:10.13
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: 1512
+  #     POSTGRES_DB: barberapp
